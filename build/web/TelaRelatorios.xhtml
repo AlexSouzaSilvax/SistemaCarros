@@ -19,30 +19,18 @@
             </h:form>
         </div>
 
-        <h:form>
-            <p:growl id="messages"/>
 
-            <p:menubar>
+        <ui:composition template="Template.xhtml">
 
-                <p:menuitem value="Home" action="#{usuario.principal()}" icon="ui-icon-home" ajax="false" />
+            <ui:define name="content">
+                
+                <h2>Relátorios Power BI</h2>  
 
-                <p:menuitem value="Relátorios" action="#{usuario.relatorio()}" icon="ui-icon-clipboard" ajax="false" />
+                <iframe align="center" width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYmY4YTFiNTgtMzgzMi00NGU0LWIxZDMtMGFlMmJkMzJiYzc4IiwidCI6IjRiOGZkYTdiLTU2NTUtNGZkZC05MTYyLWRmODk4NTUzYTUxZSJ9" frameborder="0" allowFullScreen="true"></iframe>
 
-                <p:menuitem value="Sair" action="#{usuario.sair()}" icon="ui-icon-close" ajax="false" />
+            </ui:define>
 
-                <f:facet name="options">
-                    <p:inputText style="margin-right:10px" placeholder="Search"/>
-                    <p:commandButton type="button" value="Pesquisar" icon="ui-icon-extlink" />
-                </f:facet>
-            </p:menubar>
+        </ui:composition>            
 
-            <h2>Relátorios Power BI</h2>  
-
-            <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYmY4YTFiNTgtMzgzMi00NGU0LWIxZDMtMGFlMmJkMzJiYzc4IiwidCI6IjRiOGZkYTdiLTU2NTUtNGZkZC05MTYyLWRmODk4NTUzYTUxZSJ9" frameborder="0" allowFullScreen="true"></iframe>
-
-            <div class="nav2">
-
-            </div>
-        </h:form>
     </h:body>
 </html>

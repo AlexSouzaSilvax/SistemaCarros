@@ -1,2 +1,0 @@
-OrientacaoObjetos.OrientacaoObjeto_aula25.testes
-OrientacaoObjetos.OrientacaoObjeto_aula25.testesCarro

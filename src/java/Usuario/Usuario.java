@@ -10,6 +10,7 @@ public class Usuario {
 
     private String seqCliente;
     private String nome;
+    private String unidNegocio;
     private Date dataCadastro;
     private String situacao;
     private String telefone;
@@ -90,6 +91,14 @@ public class Usuario {
         this.login = login;
     }
 
+    public String getUnidNegocio() {
+        return unidNegocio;
+    }
+
+    public void setUnidNegocio(String unidNegocio) {
+        this.unidNegocio = unidNegocio;
+    }
+
     public String abrirPagina() {
         FacesContext context = FacesContext.getCurrentInstance();
 
@@ -102,17 +111,21 @@ public class Usuario {
         }
         context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuário Inválido", ""));
         System.err.println("Usuário inválido!\n" + "Login:  " + login + " | Senha: " + senha + "  Inseridos.");
-        return "index";
+        return "TelaLogin";
     }
 
     public String sair() {
         System.out.println("Método sair chamado!");
-        return "index";
+        return "TelaLogin";
     }
 
     public String relatorio() {
         System.out.println("Tela de Relátorio chamada!");
         return "TelaRelatorios";
+    }
+    public String cadastros() {
+        System.out.println("Tela de Cadastros chamada!");
+        return "TelaCadastros";
     }
 
     public String principal() {

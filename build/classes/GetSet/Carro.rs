@@ -1,2 +1,0 @@
-GetSet.Carro
-GetSet.testeCarro

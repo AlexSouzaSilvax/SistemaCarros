@@ -1,3 +1,0 @@
-OrientacaoObjetos.OrientacaoObjeto_Exercicios.exerc02
-OrientacaoObjetos.OrientacaoObjeto_Exercicios.ContaCorrente
-OrientacaoObjetos.OrientacaoObjeto_Exercicios.testesContaCorrente

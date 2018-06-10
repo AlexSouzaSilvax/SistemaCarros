@@ -7,37 +7,25 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Carteira Virtual</title>
-        <link href="css_Tela_Login/teste.css" rel="stylesheet"></link>
+        <link href="css_Tela_Principal/css_Tela_Principal.css" rel="stylesheet"></link>
 
     </h:head>
     <h:body>
-        <div class="nav1">
-            <h:form>
-                <h:commandLink action="#{usuario.principal()}">
-                    <p:graphicImage class="logo" value="img/logo_CV.png" ></p:graphicImage> 
-                </h:commandLink>
-            </h:form>
-        </div>
-
-        <h:form>
-            <p:growl id="messages"/>
-            <p:menubar>
-
-                <p:menuitem value="Home" action="#{usuario.principal()}" icon="ui-icon-home" ajax="false" />
-
-                <p:menuitem value="Relátorios" action="#{usuario.relatorio()}" icon="ui-icon-clipboard" ajax="false" />
-
-                <p:menuitem value="Sair" action="#{usuario.sair()}" icon="ui-icon-close" ajax="false"/>
-
-                <f:facet name="options">
-                    <p:inputText style="margin-right:10px" placeholder="Search"/>
-                    <p:commandButton type="button" value="Pesquisar" icon="ui-icon-extlink" />
-                </f:facet>
-            </p:menubar>
-
-            <div class="nav2">
-
-            </div>
-        </h:form>
+        
+        <ui:composition template="Template.xhtml">
+            
+            <ui:define name="content">
+                <br/>
+                
+                <p:panelGrid>
+                    <p:commandButton>TESTAnDO</p:commandButton>
+                    
+                    
+                </p:panelGrid>
+                
+            </ui:define>
+  
+        </ui:composition>
+        
     </h:body>
 </html>

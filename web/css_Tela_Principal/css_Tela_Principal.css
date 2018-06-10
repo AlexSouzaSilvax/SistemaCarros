@@ -1,125 +1,22 @@
-html,
 body {
-    width: 100%;
-    height: 100%;
-    border:none;
-    overflow-y:hidden;
-    overflow-x:hidden;
-    padding-top: 100%;
-    font-size:19px;
-    font-family:Agency FB;
-}
-/* Header */ 
-.header {
-    display: table;
-    left:100%;
-    right:100%;
     width:100%;
     height:100%;
-    border:none;
-    font-size: 100%;
-    background: url(../img/fundo_Tela_Login2.jpg) transparent no-repeat center center scroll;
+    margin:0;
+    padding:0;
 }
-/* Header1 */ 
-.header1 {
-    top:5px;
-    width:50px;
-    height:400px;
-    background-color:green;
-}
-#entrar  {
-    font-family:Agency FB;
-    color:white;
-}
-.Entrar {
-    font-family:Agency FB;
-    color:white;
-}
-a:link, a:visited {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration:none;
-}
-a:active {
-    text-decoration: none;
-}
-link {
-    color:black;
-}
-.login-page {
-    height:500px;
-    width: 360px;
-    padding: 4% 0 0;
-    margin: auto;
-    font-size: 100%;
-}
-.form {
-    font-family:Agency FB;
-    position:relative;
-    z-index: 1;
-    background:#DCDCDC;
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-    font-size: 100%;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
-}
-.form input {
-    font-family:Agency FB;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 100%;
-}
-.form button {
-    font-family:Agency FB;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4CAF50;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-}
-.commandButton {
-    font-family:Agency FB;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4CAF50;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 100%;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
 
+.logo {
+    left:100px;
+    width:150px; 
+    height:90px; 
 }
-.form button:hover,.form button:active,.form button:focus {
-    background: #43A047;
-}
-.container1{
-    background-color:green;
-    width:55px;
-    height:80px;
-}
-.container2{
-    background-color:green;
+.nav1 {
     width:100%;
-    padding-right:15px;
-    padding-left:15px;
-    margin-right:auto;
-    margin-left:auto;
+    height:90px;
+    background-color:green;
+}
+.nav2 {
+    width:100%;
+    height:522px;
+    background-color:#E0F8E0; /* verde agua hsushuhs*/
 }

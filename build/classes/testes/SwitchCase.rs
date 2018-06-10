@@ -1,2 +1,0 @@
-testes.SwitchCase
-testes.AjusteSalario

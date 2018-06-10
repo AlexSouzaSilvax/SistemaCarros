@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+
+    <h:head>
+        <title>Carteira Virtual</title>
+        <link href="css_Tela_Login/css_Tela_Login.css" rel="stylesheet"></link>
+    </h:head>
+
+    <h:body class="header">
+        <h:form id="formLogin" class="login-page">
+            <p:growl showDetail="true" sticky="true" />
+
+            <h:panelGrid class="form" columns="1" cellpadding="5">
+                <h1 style="font-size:48px">Carteira Virtual</h1>  <br/>
+
+                <p:inputText id="login" value="#{usuario.login}" placeholder="Usuário"></p:inputText>
+                <p:message for="login" display="icon" />
+
+                <p:password id="senha" value="#{usuario.senha}" placeholder="******"></p:password>
+                <p:message for="senha" display="icon" />
+                
+                <p:inputText id="unidNegocio" placeholder="Unid. de Negócio"></p:inputText>
+                <p:message for="unidNegocio" display="icon" />
+
+                <p:commandButton class="commandButton" style="font-size:18px" value="Entrar" action="#{usuario.abrirPagina}" ajax="false" ></p:commandButton>
+
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
