@@ -123,9 +123,13 @@ public class Usuario {
         System.out.println("Tela de Relátorio chamada!");
         return "TelaRelatorios";
     }
-    public String cadastros() {
-        System.out.println("Tela de Cadastros chamada!");
-        return "TelaCadastros";
+    public String cadastroUsuarios() {
+        System.out.println("Tela de Cadastro Usuarios chamada!");
+        return "TelaCadastroUsuarios";
+    }
+    public String cadastroClientes() {
+        System.out.println("Tela de Cadastro Cliente chamada!");
+        return "TelaCadastroClientes";
     }
 
     public String principal() {

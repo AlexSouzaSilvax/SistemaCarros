@@ -31,20 +31,15 @@
 
                             <p:menuitem value="Home" action="#{usuario.principal()}" icon="ui-icon-home" ajax="false" />
 
-                            <p:submenu label="Cadastros">
-                                <p:menuitem value="Usuarios" action="#{usuario.cadastros()}" icon="ui-icon-home" ajax="false" />
-                                <p:menuitem value="Clientes" action="#{usuario.cadastros()}" icon="ui-icon-home" ajax="false" />
-                                <p:menuitem value="Teste" action="#{usuario.cadastros()}" icon="ui-icon-home" ajax="false" />
+                            <p:submenu label="Cadastros" icon="ui-icon-pencil">
+                                <p:menuitem value="Usuarios" action="#{usuario.cadastroUsuarios()}" icon="ui-icon-person" ajax="false" />
+                                <p:menuitem value="Clientes" action="#{usuario.cadastroClientes()}" icon="ui-icon-person" ajax="false" />                                
                             </p:submenu>
 
                             <p:menuitem value="Relátorios" action="#{usuario.relatorio()}" icon="ui-icon-clipboard" ajax="false" />
 
                             <p:menuitem value="Sair" action="#{usuario.sair()}" icon="ui-icon-close" ajax="false"/>
 
-                            <f:facet name="options">
-                                <p:inputText style="margin-right:10px" placeholder="Search"/>
-                                <p:commandButton type="button" value="Pesquisar" icon="ui-icon-extlink" />
-                            </f:facet>
                         </p:menubar>
                     </h:form>
 
@@ -57,13 +52,39 @@
                 </ui:insert>
             </div>
 
+
+            <!-- Rodape
             <div id="footer">
                 <ui:insert name="footer" >
-                    <h1>Rodape</h1>
+                    <div class="layout-portlets-box">
+
+
+                        <div class="EmptyBox10"></div>
+
+                        <div class="Container50 Responsive100">
+
+                            <p:graphicImage value="img/logo_CV.png" library="spark-layout" styleClass="MarAuto MarTop20 MarBot10" style="height:20px;"/>
+
+
+                            <span class="DispBlock Wid100 FontSourceSansLight gray Fs12 ">Razao Social - CNPJ: 0000</span>
+                            <span class="DispBlock Wid100 FontSourceSansLight gray Fs12 ">Telefone: 964645673  Email: alexsouza8045@gmail.com</span>
+                        </div>
+
+
+                        <div class="Container50 Responsive100">
+
+                            <div class="DispInlBlock Fright">
+                                <span class="DispBlock Wid100 fontSemibold green Fs16 ">Desenvolvido Por:</span>
+                                <a href="https://www.faceboolvaak.com/AlexSouzadaSilvaa" target="_blank"><span class="DispBlock Wid100 FontSourceSansLight blue Fs13 ">ALEX SOUZA DA SILVA</span></a>
+
+                            </div>
+                        </div>
+
+                    </div>
                 </ui:insert>
             </div>
+            -->
 
         </div>
-
     </h:body>
 </html>
