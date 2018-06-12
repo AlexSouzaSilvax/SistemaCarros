@@ -11,15 +11,89 @@
 
     </h:head>
     <h:body>
-        
+
         <ui:composition template="Template.xhtml">
-            
+
             <ui:define name="content">
-                <br/>
-                formulario de cadastro ficará aqui USUARIOS
+                <br/>              
+
+                <div style="width: 1500px">
+                    <h:form>
+
+                        <h1>Cadastro de Usuarios</h1>
+                        <p:separator/>
+
+                        <p:panelGrid id="pnlPrincipal" columns="2" layout="grid" styleClass="ui-panelgrid-blank">
+
+                            <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                                <h:outputText value="Nome:" />
+                                <p:inputText  ></p:inputText>
+                            </p:panelGrid>
+
+                            <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                                <h:outputText value="Login:" />                
+                                <p:inputText  ></p:inputText>
+                            </p:panelGrid>
+
+                            <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                                <h:outputText value="Email:"/>
+                                <p:inputText label="email" required="true"></p:inputText>
+                            </p:panelGrid>
+
+                            <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                                <h:outputText value="Senha:" />                 
+                                <p:password feedback="true"
+                                            promptLabel="Fraca" weakLabel="Razoavel"
+                                            goodLabel="Forte" strongLabel="Muito Forte" />
+                            </p:panelGrid>
+
+                            <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                                <h:outputText value="Telefone:" />
+                                <p:inputMask mask="999 99999-9999" required="true" placeholder="ex: 021 99999-9999"></p:inputMask>
+                            </p:panelGrid>
+
+
+                            <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                                <h:outputText value="Situaçao:" />
+                                <p:selectOneMenu value="Ativo"  >
+                                    <f:selectItem value="#{usuario.email}" itemLabel="Ativo" itemValue="Ativo"/>
+                                    <f:selectItem value="#{usuario.login}" itemLabel="Inativo" itemValue="Inativo"/>                            
+                                </p:selectOneMenu>
+                            </p:panelGrid>
+
+                            <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                                <h:outputText value="Data Cadastro:" />
+                                <!-- <p:inputMask mask="99/99/9999" required="true" ></p:inputMask> -->
+
+                       <!-- <p:calendar locale="pt"  pattern="dd/MM/yyyy" maxdate="#{RLBMController.financeiro.dataVencimento}">                
+                        <p:ajax event="dateSelect" listener="#{RLBMController.limiteData()}" /> -->
+                                <p:calendar locale="pt"  pattern="dd/MM/yyyy" >                
+                                    <p:ajax event="dateSelect"  />
+                                </p:calendar>
+                            </p:panelGrid>
+
+                        </p:panelGrid>
+
+                        <br/><br/><br/>
+                        <p:separator/>
+                        
+                        <p:panelGrid columns="4" layout="grid" styleClass="ui-panelgrid-blank" columnClasses="ui-grid-col-0,ui-grid-col-0,ui-grid-col-0,ui-grid-col-0" >
+
+                            <p:commandButton style="background-color:green; color: #FFFFFF; font-family:Agency FB; font-size:18px;"
+                                             value="Salvar" update="pnlPrincipal" />
+                            
+                            <p:commandButton style="background-color:green; color: #FFFFFF; font-family:Agency FB; font-size:18px;"
+                                             value="Voltar" action="#{usuario.principal()}" />
+                            
+                            <p:commandButton style="background-color:red; color: #FFFFFF; font-family:Agency FB; font-size:18px;"
+                                             value="Deletar" ></p:commandButton>
+
+                        </p:panelGrid>
+                    </h:form>
+                </div>
             </ui:define>
-  
+
         </ui:composition>
-        
+
     </h:body>
 </html>
