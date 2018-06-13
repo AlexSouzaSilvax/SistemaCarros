@@ -15,8 +15,78 @@
         <ui:composition template="Template.xhtml">
             
             <ui:define name="content">
-                <br/>
-                formulario de cadastro ficará aqui Clientes
+               <br/>              
+
+                <!-- <div style="background:#EDEEE3; width: 95%; height:775px; margin: auto"> -->
+                <div style="background:#EDEEE3; width: 95%; height:775px; margin: auto">
+
+                    <h1 style="font-family:Agency FB; margin: auto;">Cadastro de Clientes</h1>
+                    <p:separator/>
+
+                    <p:panelGrid id="pnlPrincipal" columns="2" layout="grid" styleClass="ui-panelgrid-blank" style="margin: auto;">
+
+                        <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                            <h:outputText style="font-family:Agency FB;" value="Nome:" />
+                            <p:inputText style="font-family:Agency FB; width:800px;" ></p:inputText>
+                        </p:panelGrid>
+
+                        <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                            <h:outputText style="font-family:Agency FB;" value="Login:" />                
+                            <p:inputText style="font-family:Agency FB; width:400px;" ></p:inputText>
+                        </p:panelGrid>
+
+                        <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                            <h:outputText style="font-family:Agency FB;" value="Email:"/>
+                            <p:inputText style="font-family:Agency FB; width:800px;" label="email" required="true"></p:inputText>
+                        </p:panelGrid>
+
+                        <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                            <h:outputText style="font-family:Agency FB;" value="Senha:" />                 
+                            <p:password style="font-family:Agency FB; width:400px;" feedback="true"
+                                        promptLabel="Fraca" weakLabel="Razoavel"
+                                        goodLabel="Forte" strongLabel="Muito Forte" />
+                        </p:panelGrid>
+
+                        <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                            <h:outputText style="font-family:Agency FB;" value="Telefone:" />
+                            <p:inputMask style="font-family:Agency FB; width:300px;" mask="999 99999-9999" required="true" placeholder="ex: 021 99999-9999"></p:inputMask>
+                        </p:panelGrid>
+
+
+                        <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                            <h:outputText style="font-family:Agency FB;" value="Situaçao:" />
+                            <p:selectOneMenu style="font-family:Agency FB; width:380px;" value="Ativo"  >
+                                <f:selectItem value="#{usuario.email}" itemLabel="Ativo" itemValue="Ativo"/>
+                                <f:selectItem value="#{usuario.login}" itemLabel="Inativo" itemValue="Inativo"/>                            
+                            </p:selectOneMenu>
+                        </p:panelGrid>
+
+                        <p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+                            <h:outputText style="font-family:Agency FB;" value="Data Cadastro:" />
+                            <p:calendar style="width:800px;" locale="pt"  pattern="dd/MM/yyyy" >                
+                                <p:ajax event="dateSelect"  />
+                            </p:calendar>
+                        </p:panelGrid>
+
+                    </p:panelGrid>
+
+                    <br/><br/><br/>
+                    <p:separator/>
+
+                    <p:panelGrid columns="4" layout="grid" styleClass="ui-panelgrid-blank" columnClasses="ui-grid-col-0,ui-grid-col-0,ui-grid-col-0,ui-grid-col-0" >
+
+                        <p:commandButton style="background-color:green; color: #FFFFFF; font-family:Agency FB; font-size:18px;"
+                                         value="Salvar" update="pnlPrincipal" />
+
+                        <p:commandButton style="background-color:green; color: #FFFFFF; font-family:Agency FB; font-size:18px;"
+                                         value="Voltar" action="#{usuario.principal()}" />
+
+                        <p:commandButton style="background-color:red; color: #FFFFFF; font-family:Agency FB; font-size:18px;"
+                                         value="Deletar" ></p:commandButton>
+
+                    </p:panelGrid>
+
+                </div>
             </ui:define>
   
         </ui:composition>
