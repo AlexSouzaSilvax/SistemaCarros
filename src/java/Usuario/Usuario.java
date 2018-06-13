@@ -95,10 +95,6 @@ public class Usuario {
         return unidNegocio;
     }
 
-    public void setUnidNegocio(String unidNegocio) {
-        this.unidNegocio = unidNegocio;
-    }
-
     public String abrirPagina() {
         FacesContext context = FacesContext.getCurrentInstance();
 
@@ -114,6 +110,29 @@ public class Usuario {
         return "TelaLogin";
     }
 
+    public String validaLogin() {
+
+        FacesContext context = FacesContext.getCurrentInstance();
+
+        Usuario u = new Usuario();
+//        String login = u.getLogin();
+//        String senha = u.getSenha();
+
+        // valida o acesso
+//        if () {
+//            //context.addMessage(FacesMessage.FACES_MESSAGES, new FacesMessage("Usuário Válido!", "Bem - Vindo: " + login));
+//            System.out.println("Usuário válido!\n" + "Login:  " + u.getLogin() + " | Senha: " + u.getSenha() + "  Inseridos.");
+        return "TelaPrincipal";
+//        }
+//        context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuário Inválido", ""));
+//        System.err.println("Usuário inválido!\n" + "Login:  " + u.getLogin() + " | Senha: " + u.getSenha() + "  Inseridos.");
+//        return "TelaLogin";
+    }
+
+    public void setUnidNegocio(String unidNegocio) {
+        this.unidNegocio = unidNegocio;
+    }
+
     public String sair() {
         System.out.println("Método sair chamado!");
         return "TelaLogin";
@@ -123,10 +142,12 @@ public class Usuario {
         System.out.println("Tela de Relátorio chamada!");
         return "TelaRelatorios";
     }
+
     public String cadastroUsuarios() {
         System.out.println("Tela de Cadastro Usuarios chamada!");
         return "TelaCadastroUsuarios";
     }
+
     public String cadastroClientes() {
         System.out.println("Tela de Cadastro Cliente chamada!");
         return "TelaCadastroClientes";

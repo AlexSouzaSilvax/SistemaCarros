@@ -22,11 +22,11 @@
 
                 <p:password id="senha" value="#{usuario.senha}" placeholder="******"></p:password>
                 <p:message for="senha" display="icon" />
-                
+
                 <p:inputText id="unidNegocio" placeholder="Unid. de Negócio"></p:inputText>
                 <p:message for="unidNegocio" display="icon" />
 
-                <p:commandButton class="commandButton" style="font-size:18px" value="Entrar" action="#{usuario.abrirPagina}" ajax="false" ></p:commandButton>
+                <p:commandButton class="commandButton" style="font-size:18px" value="Entrar" action="#{usuario.abrirPagina()}" ajax="false" ></p:commandButton>
 
             </h:panelGrid>
         </h:form>
