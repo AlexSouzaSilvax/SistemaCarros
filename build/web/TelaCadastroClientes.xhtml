@@ -23,31 +23,38 @@
 
                         <p:panelGrid  columns="4" layout="grid" styleClass="ui-panelgrid-blank" >
                             <h1 style="align:left; font-family:Agency FB; margin: auto;">Cadastro de Clientes</h1>
-                            <p:commandButton value="Voltar" style="margin-left:785px; background-color:green; color: #FFFFFF; font-family:Agency FB; font-size:18px;" action="#{usuario.principal()}" />
-                            <p:commandButton value="Buscar" style="margin-left:515px; background-color:green; color: #FFFFFF; font-family:Agency FB; font-size:18px;" />  
-                            <p:commandButton value="Novo" ajax="false" style="margin-left:251px; background-color:green; color: #FFFFFF; font-family:Agency FB; font-size:18px;" />
-                        </p:panelGrid>
 
-                        <p:separator/>
+                            <p:commandButton value="Voltar" style=" margin-left:785px; background-color:green; color: #FFFFFF; font-family:Agency FB; font-size:18px;" 
+                                             action="#{usuario.principal()}" />
 
-                        <p:dataTable id="tblAnexos" var="a" rowIndexVar="id"  emptyMessage="Lista vazia" reflow="true">
-                            <p:column headerText="ID" width="8%" style="text-align: center">
-                                <p:outputLabel />
-                            </p:column>
-                            <p:column headerText="Nome" style="text-align: center">
-                                <p:outputLabel />
-                            </p:column>
-                            <p:column headerText="Email" style="text-align: center">
-                                <p:outputLabel />
-                            </p:column>
-                            <p:column headerText="Login" style="text-align: center">
-                                <p:outputLabel />
-                            </p:column>                                    
-                            <p:column headerText="Data Cadastro" style="text-align: center">
-                                <p:outputLabel />
-                            </p:column>                        
-                        </p:dataTable>
-                    </div>
+                            <p:commandButton value="Buscar" style=" margin-left:515px; background-color:green; color: #FFFFFF; font-family:Agency FB; font-size:18px;" />  
+
+                            <p:commandButton value="Novo" ajax="false" style=" margin-left:351px; background-color:green; color: #FFFFFF; font-family:Agency FB; font-size:18px;" />
+
+
+
+                            <p:separator/>
+
+                            <p:dataTable id="tblAnexos" var="a" rowIndexVar="id"  emptyMessage="Lista vazia" reflow="true">
+                                <p:column headerText="ID" width="8%" style="text-align: center">
+                                    <p:outputLabel />
+                                </p:column>
+                                <p:column headerText="Nome" style="text-align: center">
+                                    <p:outputLabel />
+                                </p:column>
+                                <p:column headerText="Email" style="text-align: center">
+                                    <p:outputLabel />
+                                </p:column>
+                                <p:column headerText="Login" style="text-align: center">
+                                    <p:outputLabel />
+                                </p:column>                                    
+                                <p:column headerText="Data Cadastro" style="text-align: center">
+                                    <p:outputLabel />
+                                </p:column>                        
+                            </p:dataTable>
+
+                        </p:panelGrid>  
+                    </div>  
 
                     <p:separator/>
 
