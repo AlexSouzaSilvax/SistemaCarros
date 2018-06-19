@@ -2,6 +2,13 @@ package calculandopa;
 
 import javax.swing.JOptionPane;
 
+/**
+ *
+ * @author alex Terça-Feira, 19 de Junho de 2018, 00:22
+ * 
+ * GUANABARA E O REI 
+ */
+
 public class calcTermoPA {
 
     public static void main(String[] args) {
